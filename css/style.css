@@ -26,6 +26,10 @@ body, html {
     border-top:none;
     border-right:none;
 }
+.navbar-nav li a{text-transform: uppercase;padding:25px 0;}
+.navbar-brand{
+    padding:25px;
+}
 .navbar-default a{
     margin-left:15px;
     margin-right:15px;
@@ -105,7 +109,6 @@ body, html {
 }
 .full_screen{
     /* The image used */
-    background-color:red;
     background-image: url("/img/main-back.jpg");
 
     /* Full height */
@@ -405,4 +408,22 @@ select:focus {
     border-right: 0.25em solid transparent;
     border-top: 0.375em solid rgba(255,255,255, 0.32);
     pointer-events: none;
+}
+/*OWL STAGE CAROUSEL*/
+.owl-carousel-loop .item{
+    opacity:0.4;
+    transition:.4s ease all;
+    margin:0 20px;
+    transform:scale(.8);
+}
+@media(max-width:1000px){
+    .owl-carousel-loop .item{margin:0; transform:scale(.9)}
+}
+.owl-carousel-loop .active .item{
+    opacity:1;
+    transform:scale(1);
+}
+.owl-carousel-loop .owl-item {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
